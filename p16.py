@@ -1,17 +1,17 @@
-class Result:
+class Student:
 
-  def __init__(self,name,phy,chem,maths):
-    self.name=name
+  def __init__(self,math,phy,chem):
+    self.math=math
     self.phy=phy
     self.chem=chem
-    self.maths=maths
+
+
 
   @property
   def percentage(self):
-    return str ((self.phy+self.chem+self.maths)/3) + "%"
+    return str((self.math + self.phy + self.chem)/3) + "%"
   
 
-r1=Result("Taha",90,97,99)
-print(r1.percentage)
-r1.phy=78
-print(r1.percentage)
+s1=Student(97,92,93)
+s1.chem=56
+print(s1.percentage)
